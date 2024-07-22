@@ -11,7 +11,7 @@ import SwiftUI
 struct Kadai3App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Kadai3View()
         }
     }
 }
