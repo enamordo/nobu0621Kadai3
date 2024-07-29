@@ -10,8 +10,8 @@ import SwiftUI
 struct Kadai3View: View {
     @State private var inputNumber1: String = ""
     @State private var inputNumber2: String = ""
-    @State private var number1: Int = 0
-    @State private var number2: Int = 0
+    @State private var signedNumber1: Int = 0
+    @State private var signedNumber2: Int = 0
     @State private var isOn1: Bool = false
     @State private var isOn2: Bool = false
     @State private var result: String = "0"
@@ -46,18 +46,18 @@ struct Kadai3View: View {
             }
             HStack {
                 Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
-                    number1 = Int(inputNumber1) ?? 0
-                    number1 = isOn1 ? -number1 : number1
-                    number2 = Int(inputNumber2) ?? 0
-                    number2 = isOn2 ? -number2 : number2
-                    result = String(number1 + number2)
+                    let number1 = Int(inputNumber1) ?? 0
+                    signedNumber1 = isOn1 ? -number1 : number1
+                    let number2 = Int(inputNumber2) ?? 0
+                    signedNumber2 = isOn2 ? -number2 : number2
+                    result = String(signedNumber1 + signedNumber2)
                 }.frame(width: 180)
                 Spacer()
             }
             HStack {
-                Text(String(number1)).frame(width: 100)
+                Text(String(signedNumber1)).frame(width: 100)
                 Text("+")
-                Text(String(number2)).frame(width: 100)
+                Text(String(signedNumber2)).frame(width: 100)
                 Spacer()
             }
             HStack {
