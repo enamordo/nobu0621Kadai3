@@ -15,7 +15,7 @@ struct Kadai3View: View {
     @State private var isOn1: Bool = false
     @State private var isOn2: Bool = false
     @State private var result: String = "0"
-    
+
     var body: some View {
         VStack {
             HStack {
